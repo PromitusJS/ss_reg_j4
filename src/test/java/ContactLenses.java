@@ -117,11 +117,12 @@ public class ContactLenses {
         assertEquals("", driver.findElement(By.xpath("(//*[@id=\"payment\"]/div[5]/div[2]/img[3])")).getText());
         assertEquals("", driver.findElement(By.xpath("(//*[@id=\"payment\"]/div[5]/div[2]/img[4])")).getText());
         assertEquals("", driver.findElement(By.xpath("(//*[@id=\"payment\"]/div[5]/div[2]/img[5])")).getText());
-        driver.findElement(By.xpath("(//*[@id=\"payment\"]/div[5]/div[2]/img[5])")).click();
-        assertEquals("CONFIRM AND CONTINUE TO SECURE PAYMENT »", driver.findElement(By.cssSelector("button.button.largeFwCTA")).getText());
-        driver.findElement(By.cssSelector("button.button.largeFwCTA")).click();
-        assertEquals("Order Completed", driver.findElement(By.cssSelector("h1")).getText());
-        String orderNumber = driver.findElement(By.xpath("//div[2]/div/p[3]/strong")).getText();
+        driver.findElement(By.xpath("(//*[@id=\"payment\"]/div[5]/div[2]/img[1])")).click();
+
+       // assertEquals("CONFIRM AND CONTINUE TO SECURE PAYMENT »", driver.findElement(By.cssSelector("button.button.largeFwCTA")).getText());
+      //  driver.findElement(By.cssSelector("button.button.largeFwCTA")).click();
+        assertEquals("Payment reference:", driver.findElement(By.className("field-label")).getText());
+       // String orderNumber = driver.findElement(By.xpath("//div[2]/div/p[3]/strong")).getText();
         // ERROR: Caught exception [ERROR: Unsupported command [getEval | ${orderNumber} >=0 ? true : false | ]]
         driver.get("https://www.selectspecs.com/auth/logout/");
     }
