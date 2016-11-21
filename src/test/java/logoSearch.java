@@ -32,8 +32,8 @@ public class logoSearch {
         driver.get("https://www.selectspecs.com");
         String pageTitle = driver.getTitle();
         System.out.println(pageTitle);
-        if(pageTitle.equals("Prescription Glasses & Sunglasses Online | SelectSpecs") ) {
-            System.out.println("Test passed");
+        if(pageTitle.equals("Prescription Glas111ses & Sunglasses Online | SelectSpecs") ) {
+            System.out.println("Test passed and the title of the page is:  " + pageTitle);
         }
         else {
             System.out.println("Test failed");
