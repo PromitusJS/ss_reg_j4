@@ -106,7 +106,7 @@ public class ContactLenses {
             System.out.println("Names aren't the same - FAIL");
         }
         if (expectedPrice.equals(currentPrice)){
-            System.out.println("Prices are the same - OK");
+            System.out.println("Prices are the same  - OK");
         }else {
             System.out.println("Prices aren't the same - FAIL");
         }
